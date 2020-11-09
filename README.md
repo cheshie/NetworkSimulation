@@ -14,6 +14,6 @@ Run simulation:
 
 **plot 1**
 We are interested in plotting **Graph of cwnd vs time** as shown in paragraph 31.2.1. To prepare data run: 
-> ./cwnd.sh
+> ./plot_cwnd.sh
 
 
