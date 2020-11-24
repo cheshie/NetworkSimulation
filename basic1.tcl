@@ -64,7 +64,7 @@ $ns connect $tcp0 $end0
 set myftp [new Application/FTP]
 $myftp attach-agent $tcp0
 $ns at 0.0 "$myftp start"
-$ns at 10.0 "finish"
+$ns at 1000.0 "finish"
 
 #Run the simulation
 $ns run

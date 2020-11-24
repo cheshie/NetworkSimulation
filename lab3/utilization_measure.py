@@ -1,6 +1,7 @@
+from sys import path, argv
+from os import system, getcwd
+path.append(getcwd() + "/..")
 import nstrace
-import sys
-from os import system
 
 queue_sizes = [4, 5, 8, 10, 12, 16, 20, 22, 26, 30]
 
