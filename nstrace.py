@@ -130,14 +130,30 @@ def rec_event(eventpl):
         return False
 #
 
-def drop_event(eventpl):
-    SEND_NODE = 1
-    DEST_NODE = 2
-    FLOW = 0
+def drop_event(eventpl, send_node=1, dest_node=1, FLOW=0):
     
-    if eventpl.event == "d" and eventpl.destnode == DEST_NODE and eventpl.size >= 1000 \
-        and eventpl.flow == FLOW:
+    if eventpl.event == "d" and eventpl.destnode == dest_node and eventpl.size >= 1000 \
+        and eventpl.flow == FLOW and eventpl.sendnode == send_node:
         return True
     else:
         return False
+#
+
+# lab5 - we need source and dest id instead of nodes
+# A is 0, B is 1
+# check dropped and received packets for each source
+def drop_event_id(eventpl, send_node=(0,1), dest_node=1):
+    if eventpl.event == "d" and eventpl.size >= 1000 and eventpl.dest_id[0] == dest_node:
+        # A was the source
+        if eventpl.src_id[0] == send_node[0]: 
+            return 0
+        # B was the source
+        if eventpl.src_id[0] == send_node[1]:
+            return 1
+    if eventpl.event == "r" and eventpl.size >= 1000 and eventpl.dest_id[0] == dest_node:
+        if eventpl.src_id[0] == send_node[0]:
+            return 3
+        if eventpl.src_id[0] == send_node[1]:
+            return 4
+
 #

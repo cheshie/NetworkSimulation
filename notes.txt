@@ -1,7 +1,0 @@
-Ten plik sobie zadzialal: 
-http://enggedu.com/ns2_simulator/ns2_wired_network/TCL_script_to_draw_graph_using_more_trace_input_file/index.php
-
-Z tej strony mielismy plik ktory nie dziala: 
-http://intronetworks.cs.luc.edu/current/html/ns2.html
-
-Tam na dole jest sekcja o generowaniu symulacji, czytnac ja i polaczyc jakos te dwa pliki zeby symulacja w xgraph zadzialala u nas
