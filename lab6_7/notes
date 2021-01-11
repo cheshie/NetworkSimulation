@@ -1,0 +1,7 @@
+Lab6:
+
+Punkt 31.3.3.  Zmieniamy rozmiar opóźnień na linii BR zgodnie z przykładową tabelą. Wyznaczamy wartości wskazane w tabeli, a na wykresie wskazujemy zależność goodput ratio od delayB. Będzie to punktem wyjścia do rozważań dotyczących efektu fazowego w transmisji danych pomiędzy kilkoma nadawcami a jednym, wspólnym odbiorcą.
+
+Lab7:
+
+Zależność rozmiaru opóźnienia na linii B-R w stosunku do goodput ratio i RTT ratio^2. Opóźnienie w zakresie od 0 do 60 co 1. Punkt 34.3.4.2
