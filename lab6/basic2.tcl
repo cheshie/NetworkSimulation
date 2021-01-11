@@ -84,7 +84,7 @@ proc finish {} {
         set rttratio2 [expr $rttratio*$rttratio]
         set ratio1 [expr $actualratio/$rttratio]
         set ratio2 [expr $actualratio/$rttratio2]
-        set outstr [format "%f %f %d %d %f %f %f %f %f" $delayB $overhead  $recv0 $recv1 $rttratio $rttratio2 $actualratio $ratio1 $ratio2 ]
+        set outstr [format "delayB=%f actualratio=%f " $delayB $actualratio ]
         puts stdout $outstr
         $ns flush-trace
         close $trace

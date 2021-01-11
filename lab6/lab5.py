@@ -4,7 +4,7 @@ from os import system, getcwd
 path.append(getcwd() + "/..")
 import nstrace
 
-bttnck_sizes=[0.8,1,1.5,2,2.5,3,3.5,4,4.5,5,6,7,8]
+bttnck_sizes=[0,5,23,24,25,26,35,36,40,41,45,60,61,85,110]
 
 #todo? 
 def link_count(filename):
@@ -30,8 +30,8 @@ def link_count(filename):
    return count_A, count_B, rec_A // 2, rec_B // 2
 
 def prepare_testfiles():
-    for sz in btnck_sizes:
-        system(f'ns competing.tcl {sz} && mv bttnck_{sz}.tr bottleneck_tests')
+    for sz in bttnck_sizes:
+        system(f'ns basic2.tcl {sz}')
 #
 
 def experiment_lab3():
@@ -51,29 +51,33 @@ def plot_ex_1(packets):
     plt.show()
 
 def plot_ex_2(packets):
+    x = list(packets.keys())
+    y = list(packets.values())
+    plt.plot(x,y)
     for btt_size in packets:
-        print(": ", (packets[btt_size][0]+packets[btt_size][1]) / (packets[btt_size][2] + packets[btt_size][3]))
-        plt.plot(btt_size, (packets[btt_size][0]+packets[btt_size][1]) / (packets[btt_size][2] + packets[btt_size][3]), 'r*')
+        print(": ", packets[btt_size][0])
+        plt.plot(btt_size, packets[btt_size][0], 'r*')
     plt.show()
 
 #packets = experiment_lab3()
 
 packets = {
-0.8 : [91,86,14936,14856],
-1 : [93,92,18407,18382],
-1.5 : [78,85,26963,26347],
-2 : [66,75,34531,34345],
-2.5 : [61,70,41656,41494],
-3 : [57,65,49190,49032],
-3.5 : [52,60,56132,55922],
-4 : [47,56,63590,63340],
-4.5 : [45,54,70267,69975],
-5 : [42,51,77441,76577],
-6 : [38,47,91388,90511],
-7 : [34,43,104284,103895],
-8 : [32,41,121125,114825]}
+0 : [1.006228],
+5 : [0.172296],
+23 : [3.218782 ],
+24 : [1.796688],
+25 : [1.087538],
+26 : [4.678606],
+35 : [1.485915],
+36 : [7.157924],
+40 : [2.331585],
+41 : [5.925741],
+45 : [1.805602],
+60 : [1.909918],
+61 : [8.240510],
+85 : [2.493663 ],
+110 : [3.808113]}
 
 plot_ex_2(packets)
-
 #prepare_testfiles()
 #print(experiment_lab3())
