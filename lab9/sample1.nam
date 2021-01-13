@@ -1,0 +1,13 @@
+n -t * -s 0  -x 485.63058627100224 -y 394.61076538758857 -Z 0 -z 30  -v circle -c black
+n -t * -s 1  -x 278.91733650067698 -y 210.93965350228348 -Z 0 -z 30  -v circle -c black
+n -t * -s 2  -x 78.445516097566824 -y 347.03124144441972 -Z 0 -z 30  -v circle -c black
+n -t * -s 3  -x 192.59369545271326 -y 337.79157900148607 -Z 0 -z 30  -v circle -c black
+V -t * -v 1.0a5 -a 0
+W -t * -x 500 -y 400
+A -t * -n 1 -p 0 -o 0x7fffffff -c 30 -a 1
+A -t * -h 1 -m 1073741823 -s 0
+n -t 0.10000000000000001 -s 0 -S DLABEL -l "Node(0)" -L ""
+n -t 0.10000000000000001 -s 1 -S DLABEL -l "Node(1)" -L ""
+n -t 0.10000000000000001 -s 2 -S DLABEL -l "Node(2)" -L ""
+n -t 0.10000000000000001 -s 3 -S DLABEL -l "Node(3)" -L ""
+W -t 10.0
